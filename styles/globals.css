@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #273343; /* Cor primária */
+  --secondary-color: #9fbf38; /* Cor secundária */
+  --bg-color: #fefefe; /* Fundo branco */
+  --text-color: #000000; /* Texto preto */
+  --node-border-radius: 10px;
+  --node-box-shadow: 10px 0 15px rgba(131, 166, 236, 0.3),
+    -10px 0 15px rgba(42, 233, 83, 0.3);
+}
 
 .react-flow {
-  --bg-color: rgb(248, 249, 250); /* Slate quase branco */
-  --text-color: rgb(0, 0, 0); /* Texto preto */
-  --node-border-radius: 10px;
-  --node-box-shadow: 10px 0 15px rgba(42, 138, 246, 0.3),
-    -10px 0 15px rgba(233, 42, 103, 0.3);
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
 .react-flow__node-turbo {
   border-radius: var(--node-border-radius);
   display: flex;
@@ -39,10 +44,10 @@
   width: calc(100% * 1.41421356237);
   background: conic-gradient(
     from -160deg at 50% 50%,
-    #e92a67 0deg,
-    #a853ba 120deg,
-    #2a8af6 240deg,
-    #e92a67 360deg
+    var(--secondary-color) 0deg,
+    #9fbf38 120deg,
+    var(--primary-color) 240deg,
+    var(--secondary-color) 360deg
   );
   left: 50%;
   top: 50%;
@@ -54,10 +59,10 @@
   content: '';
   background: conic-gradient(
     from -160deg at 50% 50%,
-    #e92a67 0deg,
-    #a853ba 120deg,
-    #2a8af6 240deg,
-    rgba(42, 138, 246, 0) 360deg
+    var(--secondary-color) 0deg,
+    #9fbf38 120deg,
+    var(--primary-color) 240deg,
+    rgba(42, 246, 76, 0) 360deg
   );
   animation: spinner 4s linear infinite;
   transform: translate(-50%, -50%) rotate(0deg);
@@ -151,12 +156,13 @@
 .react-flow__controls button {
   background-color: var(--bg-color);
   color: var(--text-color);
-  border: 1px solid #95679e;
+  border: 1px solid var(--primary-color);
   border-bottom: none;
 }
 
 .react-flow__controls button:hover {
-  background-color: rgb(37, 37, 37);
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
 
 .react-flow__controls button:first-child {
@@ -164,7 +170,7 @@
 }
 
 .react-flow__controls button:last-child {
-  border-bottom: 1px solid #95679e;
+  border-bottom: 1px solid var(--primary-color);
   border-radius: 0 0 5px 5px;
 }
 
@@ -177,5 +183,5 @@
 }
 
 .react-flow__attribution a {
-  color: #95679e;
+  color: var(--primary-color);
 }

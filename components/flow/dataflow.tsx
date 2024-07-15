@@ -136,8 +136,8 @@ const Flow = () => {
       <svg>
         <defs>
           <linearGradient id="edge-gradient">
-            <stop offset="0%" stopColor="#ae53ba" />
-            <stop offset="100%" stopColor="#2a8af6" />
+            <stop offset="0%" stopColor="#9fbf38" />
+            <stop offset="100%" stopColor="#fefefe" />
           </linearGradient>
 
           <marker
@@ -150,7 +150,7 @@ const Flow = () => {
             markerHeight="10"
             orient="auto"
           >
-            <circle stroke="#2a8af6" strokeOpacity="0.75" r="2" cx="0" cy="0" />
+            <circle stroke="#fefefe" strokeOpacity="0.75" r="2" cx="0" cy="0" />
           </marker>
         </defs>
       </svg>
