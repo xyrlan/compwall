@@ -6,10 +6,15 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import Flow from "@/components/flow/dataflow";
+
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <div className="h-[1200px] w-[1600px]">
+        <Flow />
+      </div>
       <div className="inline-block max-w-lg text-center justify-center">
         <h1 className={title()}>Make&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
@@ -51,6 +56,7 @@ export default function Home() {
           </span>
         </Snippet>
       </div>
+
     </section>
   );
 }
