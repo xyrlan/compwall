@@ -1,22 +1,17 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import BreadcrumbsComponent from "@/components/bread-crumbs";
 import Flow from "@/components/flow/dataflow";
+import TabsComponent from "@/components/tabs-component";
 
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="h-[1200px] w-[1600px]">
-        <Flow />
-      </div>
-      
-
+    <section className="flex flex-col gap-4">
+      <BreadcrumbsComponent items={[{ name: "Production", href: "/" }, { name: "Visao Geral", href: "/" }]} />
+      <TabsComponent items={[{
+        name: "Dataflow", key: "dataflow", content: <div className="h-[900px]">
+          <Flow />
+        </div>
+      }, { name: "Aplicacoes", key: "apps", content: <div>Aplicacoes</div> }]} />
     </section>
   );
 }

@@ -1,0 +1,17 @@
+"use client";
+import React from "react";
+import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
+
+export default function BreadcrumbsComponent({ items }: { items: { name: string; href: string }[] }) {
+  return (
+    <Breadcrumbs>
+      {
+        items.map((item, index) => (
+          <BreadcrumbItem key={index} href={item.href}>
+            {item.name}
+          </BreadcrumbItem>
+        ))
+      }
+    </Breadcrumbs>
+  );
+}

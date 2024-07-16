@@ -14,21 +14,10 @@ import {
   Logo,
 } from "@/components/icons";
 import SelectComponent, { SelectData } from "./select";
+import SearchInput from "./search-input";
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      fullWidth
-      color="default"
-      labelPlacement="outside"
-      placeholder="Search in prod..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+
 
   const selectData: SelectData = {
     label: "Environment",
@@ -41,7 +30,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar maxWidth="full" position="sticky" className="z-50 fixed top-0">
+    <NextUINavbar maxWidth="full" position="sticky" className="z-50 sticky top-0">
       <NavbarContent className="w-[250px]" justify="center">
 
         <NextLink href="/" className="cursor-pointer">
@@ -51,7 +40,7 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent className="" justify="start">
         <NavbarItem className="hidden lg:flex basis-2/12"><SelectComponent selectData={selectData} /></NavbarItem>
-        <NavbarItem className="hidden lg:flex basis-10/12">{searchInput}</NavbarItem>
+        <NavbarItem className="hidden lg:flex basis-10/12"><SearchInput placeholder="Search in prod..."/></NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
@@ -59,7 +48,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
+        <SearchInput placeholder="Search in prod..."/>
       </NavbarMenu>
     </NextUINavbar>
   );

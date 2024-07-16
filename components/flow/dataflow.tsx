@@ -131,6 +131,7 @@ const Flow = () => {
       nodeTypes={nodeTypes}
       edgeTypes={edgeTypes}
       defaultEdgeOptions={defaultEdgeOptions}
+      maxZoom={1}
     >
       <Controls showInteractive={false} />
       <svg>

@@ -44,23 +44,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <Navbar />
           <Sidebar />
-          <div className="relative flex flex-col h-screen">
-            
-            <main className=" mx-auto pt-16 px-6 flex-grow">
-              {children}
-            </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
-            </footer>
-          </div>
+          <main className="pt-16 px-10 flex-grow ml-[250px] min-h-screen bg-slate-100">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>
