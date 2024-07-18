@@ -18,6 +18,7 @@ import {
 } from "@nextui-org/react";
 import { PlusIcon, SearchIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
 type Column = {
@@ -30,7 +31,7 @@ type Row = {
   [key: string]: any;
 };
 
-export default function TableComponent({ rows, columns, placeholder }: { rows: Row[], columns: Column[], placeholder?: string }) {
+export default function TableComponent({ rows, columns, placeholder, icon }: { rows: Row[], columns: Column[], placeholder?: string, icon?: React.ReactNode }) {
   const [filterValue, setFilterValue] = React.useState("");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [sortDescriptor, setSortDescriptor] = React.useState({
@@ -39,6 +40,7 @@ export default function TableComponent({ rows, columns, placeholder }: { rows: R
   });
   const [page, setPage] = React.useState(1);
   const [visibleColumns, setVisibleColumns] = React.useState(new Set(columns.map(col => col.key)));
+  const pathname = usePathname();
 
   const hasSearchFilter = Boolean(filterValue);
 
@@ -79,7 +81,8 @@ export default function TableComponent({ rows, columns, placeholder }: { rows: R
     const cellValue = getKeyValue(row, columnKey);
     if (columnKey === columns[0].key) { // assumindo que a primeira coluna deve ser o link
       return (
-        <Link href={`/sources/${row[columnKey]}`}>
+        <Link href={`/${pathname.split("/")[1]}/${row[columnKey]}`} className="flex items-center gap-2">
+          {icon}
           <p className="text-blue-600 font-semibold hover:underline">{cellValue}</p>
         </Link>
       );
@@ -128,8 +131,8 @@ export default function TableComponent({ rows, columns, placeholder }: { rows: R
         </div>
         <div className="flex justify-between items-center">
           <span className="text-default-400 text-small">Total {rows.length} items</span>
-          <label className="flex items-center text-default-400 text-small">
-            Rows per page:
+          <label className="flex items-center text-default-400 text-small gap-2">
+            Linhas por página:
             <select
               className="bg-transparent outline-none text-default-400 text-small"
               onChange={onRowsPerPageChange}

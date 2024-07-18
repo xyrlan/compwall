@@ -17,6 +17,7 @@ export default function SelectComponent({ selectData }: { selectData: SelectData
         placeholder={selectData.placeholder}
         defaultSelectedKeys={[selectData.options[0].value]}
        color="default"
+       className="min-w-[250px]"
       >
         {(option: any) => <SelectItem key={option.value}>{option.value}</SelectItem>}
       </Select>

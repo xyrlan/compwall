@@ -4,7 +4,7 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 
 export default function BreadcrumbsComponent({ items }: { items: { name: string; href: string }[] }) {
   return (
-    <Breadcrumbs>
+    <Breadcrumbs size="lg">
       {
         items.map((item, index) => (
           <BreadcrumbItem key={index} href={item.href}>

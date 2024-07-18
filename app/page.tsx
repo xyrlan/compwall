@@ -1,3 +1,4 @@
+"use client";
 import BreadcrumbsComponent from "@/components/bread-crumbs";
 import Flow from "@/components/flow/dataflow";
 import TabsComponent from "@/components/tabs-component";

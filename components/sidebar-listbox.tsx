@@ -95,7 +95,7 @@ export default function SidebarListbox() {
       {listboxSections.map((section, index) => (
         <ListboxSection key={index} title={section.title} showDivider>
           {section.items.map((item, index) => (
-            <ListboxItem key={index} startContent={item.icon} className={` ${selectedKey === item.key ? "text-default-400" : ""}`} onClick={() => {
+            <ListboxItem key={index} startContent={item.icon} className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`} onClick={() => {
               if (item.key === "overview") {
                 router.push("/")
               } else {
