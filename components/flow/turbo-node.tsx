@@ -7,7 +7,7 @@ export type TurboNodeData = {
   subline?: string;
 };
 
-export default memo(({ data }: NodeProps<Node<TurboNodeData>>) => {
+const TurboNode = memo(({ data }: NodeProps<Node<TurboNodeData>>) => {
   return (
     <>
       <div className="cloud gradient">
@@ -28,3 +28,7 @@ export default memo(({ data }: NodeProps<Node<TurboNodeData>>) => {
     </>
   );
 });
+
+TurboNode.displayName = "TurboNode";
+
+export { TurboNode };

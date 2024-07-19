@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Handle, Position } from "@xyflow/react";
 
-export default memo(({ data, isConnectable }: any) => {
+ const ColorSelectorNode = memo(({ data, isConnectable }: any) => {
   return (
     <>
       <Handle
@@ -37,3 +37,8 @@ export default memo(({ data, isConnectable }: any) => {
     </>
   );
 });
+
+
+ColorSelectorNode.displayName = "ColorSelectorNode";
+
+export { ColorSelectorNode };

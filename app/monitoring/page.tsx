@@ -132,15 +132,15 @@ const MonitoringPage = () => {
                     <div className="flex flex-row justify-center items-center gap-40">
                       <div className="flex flex-col gap-2 text-center">
                         <p className="text-5xl font-bold">4</p>
-                        <label className="block text-sm font-bold text-gray-800">
+                        <p className="block text-sm font-bold text-gray-800">
                           Total
-                        </label>
+                        </p>
                       </div>
                       <div className="flex flex-col gap-2 text-center">
                         <p className="text-5xl font-bold">3</p>
-                        <label className="block text-sm font-bold text-gray-800">
+                        <p className="block text-sm font-bold text-gray-800">
                           Materializados
-                        </label>
+                        </p>
                       </div>
                     </div>
 
@@ -189,9 +189,9 @@ const MonitoringPage = () => {
                   />
                   <div className="flex flex-col gap-2 text-center justify-center">
                     <p className="text-5xl font-bold">100%</p>
-                    <label className="block text-sm font-bold text-gray-800">
+                    <p className="block text-sm font-bold text-gray-800">
                       SLO de confiabilidade (30 dias)
-                    </label>
+                    </p>
                   </div>
                 </CardCharts>
                 <CardCharts title={"Recurso de atendimento ao SLO de latência"}>
@@ -204,9 +204,9 @@ const MonitoringPage = () => {
                   />
                   <div className="flex flex-col gap-2 text-center justify-center">
                     <p className="text-5xl font-bold">100%</p>
-                    <label className="block text-sm font-bold text-gray-800">
+                    <p className="block text-sm font-bold text-gray-800">
                       SLO de latência (30 dias)
-                    </label>
+                    </p>
                   </div>
                 </CardCharts>
               </>

@@ -11,7 +11,7 @@ import {
 } from "@xyflow/react";
 
 import "@xyflow/react/dist/base.css";
-import turboNode, { TurboNodeData } from "./turbo-node";
+import { TurboNode, TurboNodeData } from "./turbo-node";
 import TurboEdge from "./turbo-edge";
 import FunctionIcon from "./function-icon";
 
@@ -139,7 +139,7 @@ const initialEdges: Edge[] = [
 ];
 
 const nodeTypes = {
-  turbo: turboNode,
+  turbo: TurboNode,
 };
 
 const edgeTypes = {

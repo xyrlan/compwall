@@ -8,11 +8,11 @@ import { subtitle } from "@/components/primitives";
 import { data } from "./fake-data";
 
 const JobsPage = () => {
-  const renderRowData = (label: string, value: string) => (
-    <div key={label} className="flex justify-between">
-      <label className="block text-sm font-semibold text-gray-800">
-        {label}
-      </label>
+  const renderRowData = (p: string, value: string) => (
+    <div key={p} className="flex justify-between">
+      <p className="block text-sm font-semibold text-gray-800">
+        {p}
+      </p>
       <p className="text-sm text-gray-600">{value}</p>
     </div>
   );
@@ -50,9 +50,9 @@ const JobsPage = () => {
             <Divider />
             <CardBody className="flex flex-col gap-4">
               <div className="flex justify-between">
-                <label className="block text-sm font-semibold text-gray-800">
+                <p className="block text-sm font-semibold text-gray-800">
                   Tipo de instância
-                </label>
+                </p>
                 <p className="text-sm text-gray-600">n/a</p>
               </div>
             </CardBody>
@@ -65,16 +65,16 @@ const JobsPage = () => {
           <Card>
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
-                <label className="block font-semibold text-gray-800 mb-2">
+                <p className="block font-semibold text-gray-800 mb-2">
                   Pyton
-                </label>
+                </p>
                 <p className="text-sm text-gray-600">Lendo Data Source</p>
               </div>
               <Divider className="h-14" orientation="vertical" />
               <div className="flex flex-col justify-between w-full">
-                <label className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
+                <p className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
                   <Dot className="text-teal-500" /> Sucesso
-                </label>
+                </p>
                 <div className="h-2 bg-teal-500 w-full" />
               </div>
             </CardBody>
@@ -82,18 +82,18 @@ const JobsPage = () => {
           <Card>
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
-                <label className="block font-semibold text-gray-800 mb-2 ">
+                <p className="block font-semibold text-gray-800 mb-2 ">
                   Pyton
-                </label>
+                </p>
                 <p className="text-sm text-gray-600 ">
                   Avaliando pipelines de visualização de recursos
                 </p>
               </div>
               <Divider className="h-14" orientation="vertical" />
               <div className="flex flex-col justify-between w-full">
-                <label className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
+                <p className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
                   <Dot className="text-teal-500" /> Sucesso
-                </label>
+                </p>
                 <div className="h-2 bg-teal-500 w-full" />
               </div>
             </CardBody>
@@ -101,18 +101,18 @@ const JobsPage = () => {
           <Card>
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
-                <label className="block font-semibold text-gray-800 mb-2 ">
+                <p className="block font-semibold text-gray-800 mb-2 ">
                   Agregações Hookz
-                </label>
+                </p>
                 <p className="text-sm text-gray-600 ">
                   Computação de características agregadas e junção de resultados
                 </p>
               </div>
               <Divider className="h-14" orientation="vertical" />
               <div className="flex flex-col justify-between w-full">
-                <label className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
+                <p className="text-sm font-semibold text-gray-800 mb-2 flex gap-2">
                   <Dot className="text-teal-500" /> Sucesso
-                </label>
+                </p>
                 <div className="h-2 bg-teal-500 w-full" />
               </div>
             </CardBody>
