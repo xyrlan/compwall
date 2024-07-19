@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const columns = [
   { key: "transformation", label: "Transformação" },
   { key: "tags", label: "Tags" },
@@ -9,7 +7,7 @@ export const columns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const rows = [
@@ -25,7 +23,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-03-06 16:31",
     owner: "n/a",
-    created: "2024-03-06 16:31"
+    created: "2024-03-06 16:31",
   },
   {
     key: "2",
@@ -39,7 +37,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-03-06 16:31",
     owner: "n/a",
-    created: "2024-03-06 16:31"
+    created: "2024-03-06 16:31",
   },
   {
     key: "3",
@@ -53,7 +51,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-03-06 16:31",
     owner: "n/a",
-    created: "2024-03-06 16:31"
+    created: "2024-03-06 16:31",
   },
   {
     key: "4",
@@ -67,15 +65,17 @@ export const rows = [
     lastUpdatedBy: "matt@tecton.ai",
     lastUpdated: "2024-02-07 18:23",
     owner: "n/a",
-    created: "2024-02-07 18:23"
-  }
+    created: "2024-02-07 18:23",
+  },
 ];
 
-export const data = [{
-  title: "Configuração",
-  mode: "Python",
-  transformation_function: "transaction_amount_is_higher_than_average",
-}];
+export const data = [
+  {
+    title: "Configuração",
+    mode: "Python",
+    transformation_function: "transaction_amount_is_higher_than_average",
+  },
+];
 
 export const featureViewColumns = [
   { key: "featureView", label: "Visualização de Recurso" },
@@ -85,7 +85,7 @@ export const featureViewColumns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const featureViewRows = [
@@ -98,6 +98,6 @@ export const featureViewRows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
-  }
+    created: "2024-04-01 22:30",
+  },
 ];

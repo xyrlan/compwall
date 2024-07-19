@@ -1,18 +1,22 @@
-import React from 'react'
+import React from "react";
 import { Divider } from "@nextui-org/react";
 
-const CardCharts = ({ title, children }: { title: string, children: React.ReactNode }) => {
+const CardCharts = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
   return (
-    <div className='rounded-xl'>
+    <div className="rounded-xl">
       <h3 className="flex flex-row items-center font-medium bg-gray-200 py-4 px-4 rounded-t-xl">
         {title}
       </h3>
       <Divider />
-      <div className="grid grid-cols-2 gap-4">
-        {children}
-      </div>
+      <div className="grid grid-cols-2 gap-4">{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default CardCharts
+export default CardCharts;

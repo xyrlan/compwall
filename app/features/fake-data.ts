@@ -1,7 +1,3 @@
-import { Monitor } from "lucide-react";
-import { title } from "process";
-import React from "react";
-
 export const columns = [
   { key: "featureView", label: "Visualização de Recurso" },
   { key: "tags", label: "Tags" },
@@ -14,7 +10,7 @@ export const columns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const rows = [
@@ -33,7 +29,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "2",
@@ -50,7 +46,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "3",
@@ -67,7 +63,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "4",
@@ -84,8 +80,8 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
-  }
+    created: "2024-04-01 22:30",
+  },
 ];
 
 export const data = [
@@ -99,7 +95,7 @@ export const data = [
     offline: "enabled",
     inicio_da_funcionalidade: "2020-01-01 00:00:00",
     chave_secundaria_de_agregacao: "n/a",
-    email_de_alerta: "n/a"
+    email_de_alerta: "n/a",
   },
   {
     title: "Recursos",
@@ -108,9 +104,9 @@ export const data = [
     amount_mean_7d_1d: "aggregation",
     amount_count_1d_1d: "aggregation",
     amount_count_3d_1d: "aggregation",
-    amount_count_7d_1d: "aggregation"
-  }
-]
+    amount_count_7d_1d: "aggregation",
+  },
+];
 
 export const materializationData = [
   {
@@ -124,7 +120,7 @@ export const materializationData = [
     Atraso_maximo_da_fonte_de_dados: "n/a",
     Preenchimento_incremental: "disabled",
     Intervalo_maximo_de_preenchimento: "n/a",
-    Compactacao_de_lote: "disabled"
+    Compactacao_de_lote: "disabled",
   },
   {
     title: "Configuração de Armazenamento",
@@ -137,9 +133,9 @@ export const materializationData = [
     offline: "enabled",
     Formato_da_tabela_de_estágio: "Delta",
     Publicar_funcionalidades_completas: "n/a",
-    Inicio_da_publicacao: "n/a"
-  }
-]
+    Inicio_da_publicacao: "n/a",
+  },
+];
 
 export const materializationColumns = [
   { key: "status", label: "Status" },
@@ -150,7 +146,7 @@ export const materializationColumns = [
   { key: "offline", label: "Offline" },
   { key: "latestStateChange", label: "Última Mudança de Estado" },
   { key: "latestDuration", label: "Última Duração" },
-  { key: "actions", label: "Ações" }
+  { key: "actions", label: "Ações" },
 ];
 
 export const materializationRows = [
@@ -164,7 +160,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-12 00:03",
     latestDuration: "2m 3s",
-    actions: ""
+    actions: "",
   },
   {
     key: "2",
@@ -176,7 +172,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-11 00:04",
     latestDuration: "2m 2s",
-    actions: ""
+    actions: "",
   },
   {
     key: "3",
@@ -188,7 +184,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-10 00:06",
     latestDuration: "2m 3s",
-    actions: ""
+    actions: "",
   },
   {
     key: "4",
@@ -200,7 +196,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-09 00:06",
     latestDuration: "2m 2s",
-    actions: ""
+    actions: "",
   },
   {
     key: "5",
@@ -212,7 +208,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-08 00:03",
     latestDuration: "2m 6s",
-    actions: ""
+    actions: "",
   },
   {
     key: "6",
@@ -224,7 +220,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-07 00:03",
     latestDuration: "2m 3s",
-    actions: ""
+    actions: "",
   },
   {
     key: "7",
@@ -236,7 +232,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-06 00:03",
     latestDuration: "2m 2s",
-    actions: ""
+    actions: "",
   },
   {
     key: "8",
@@ -248,7 +244,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-05 00:03",
     latestDuration: "2m 3s",
-    actions: ""
+    actions: "",
   },
   {
     key: "9",
@@ -260,7 +256,7 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-04 00:03",
     latestDuration: "2m 3s",
-    actions: ""
+    actions: "",
   },
   {
     key: "10",
@@ -272,8 +268,8 @@ export const materializationRows = [
     offline: "enabled",
     latestStateChange: "2024-06-03 00:03",
     latestDuration: "2m 2s",
-    actions: ""
-  }
+    actions: "",
+  },
 ];
 
 export const serviceRows = [
@@ -283,7 +279,7 @@ export const serviceRows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "2",
@@ -291,8 +287,8 @@ export const serviceRows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
-  }
+    created: "2024-04-01 22:30",
+  },
 ];
 
 export const serviceColumns = [
@@ -300,6 +296,5 @@ export const serviceColumns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
-

@@ -9,7 +9,7 @@ export const columns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const rows = [
@@ -27,7 +27,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "2",
@@ -43,7 +43,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "3",
@@ -59,8 +59,8 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
-  }
+    created: "2024-04-01 22:30",
+  },
 ];
 
 export const fileConfig = {
@@ -71,7 +71,7 @@ export const fileConfig = {
   timestamp_format: "TIMESTAMP_FORMAT_ISO_8601",
   post_processor: "POST_PROCESSOR_NONE",
   data_delay: "DATA_DELAY_NONE",
-}
+};
 
 export const data = [
   {
@@ -83,4 +83,4 @@ export const data = [
     post_processor: "POST_PROCESSOR_NONE",
     data_delay: "DATA_DELAY_NONE",
   },
-]
+];

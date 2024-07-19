@@ -1,5 +1,5 @@
-import React from 'react';
-import { EdgeProps, getBezierPath } from '@xyflow/react';
+import React from "react";
+import { EdgeProps, getBezierPath } from "@xyflow/react";
 
 export default function TurboEdge({
   id,
@@ -28,11 +28,11 @@ export default function TurboEdge({
   return (
     <>
       <path
-        id={id}
-        style={style}
         className="react-flow__edge-path"
         d={edgePath}
+        id={id}
         markerEnd={markerEnd}
+        style={style}
       />
     </>
   );

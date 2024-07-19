@@ -1,6 +1,5 @@
-import React, { memo, ReactNode } from 'react';
-import { Handle, NodeProps, Position, Node } from '@xyflow/react';
-
+import React, { memo, ReactNode } from "react";
+import { Handle, NodeProps, Position, Node } from "@xyflow/react";
 
 export type TurboNodeData = {
   title: string;
@@ -12,9 +11,7 @@ export default memo(({ data }: NodeProps<Node<TurboNodeData>>) => {
   return (
     <>
       <div className="cloud gradient">
-        <div>
-          {data.icon}
-        </div>
+        <div>{data.icon}</div>
       </div>
       <div className="wrapper gradient">
         <div className="inner">
@@ -24,8 +21,8 @@ export default memo(({ data }: NodeProps<Node<TurboNodeData>>) => {
               {data.subline && <div className="subline">{data.subline}</div>}
             </div>
           </div>
-          <Handle type="target" position={Position.Left} />
-          <Handle type="source" position={Position.Right} />
+          <Handle position={Position.Left} type="target" />
+          <Handle position={Position.Right} type="source" />
         </div>
       </div>
     </>

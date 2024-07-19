@@ -1,6 +1,3 @@
-import { materializationRows } from './../features/fake-data';
-import { title } from "process";
-
 export const columns = [
   { key: "featureService", label: "Serviço de Funcionalidade" },
   { key: "tags", label: "Tags" },
@@ -9,7 +6,7 @@ export const columns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const rows = [
@@ -24,7 +21,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "2",
@@ -37,7 +34,7 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
+    created: "2024-04-01 22:30",
   },
   {
     key: "3",
@@ -50,10 +47,9 @@ export const rows = [
     lastUpdatedBy: "mahesh@tecton.ai",
     lastUpdated: "2024-04-01 22:30",
     owner: "n/a",
-    created: "2024-04-01 22:30"
-  }
+    created: "2024-04-01 22:30",
+  },
 ];
-
 
 export const data = [
   {
@@ -66,14 +62,14 @@ export const data = [
     Logging_enabled: "disabled",
     Logging_sample_rate: "0.0",
     Log_effective_times: "n/a",
-    Caching: "disabled"
-  }
-]
+    Caching: "disabled",
+  },
+];
 
 export const materializationTableColumns = [
   { key: "featureView", label: "Visualização de Funcionalidade" },
   { key: "processingTimeline", label: "Linha do Tempo de Processamento" },
-  { key: "lastProcessed", label: "Último Processamento" }
+  { key: "lastProcessed", label: "Último Processamento" },
 ];
 
 export const materializationTableRows = [
@@ -81,18 +77,18 @@ export const materializationTableRows = [
     key: "1",
     featureView: "user_credit_card_issuer",
     processingTimeline: "2016-2024",
-    lastProcessed: "19 hours ago"
+    lastProcessed: "19 hours ago",
   },
   {
     key: "2",
     featureView: "user_transaction_amount_totals",
     processingTimeline: "2018-2024",
-    lastProcessed: "19 hours ago"
+    lastProcessed: "19 hours ago",
   },
   {
     key: "3",
     featureView: "user_transaction_metrics",
     processingTimeline: "2017-2024",
-    lastProcessed: "19 hours ago"
-  }
+    lastProcessed: "19 hours ago",
+  },
 ];

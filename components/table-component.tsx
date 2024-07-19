@@ -9,17 +9,12 @@ import {
   TableCell,
   Input,
   Button,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
   Pagination,
   getKeyValue,
 } from "@nextui-org/react";
-import { PlusIcon, SearchIcon } from "lucide-react";
+import { SearchIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 
 type Column = {
   key: string;
@@ -31,7 +26,19 @@ type Row = {
   [key: string]: any;
 };
 
-export default function TableComponent({ rows, columns, placeholder, icon, isHref }: { rows: Row[], columns: Column[], placeholder?: string, icon?: React.ReactNode, isHref?: boolean }) {
+export default function TableComponent({
+  rows,
+  columns,
+  placeholder,
+  icon,
+  isHref,
+}: {
+  rows: Row[];
+  columns: Column[];
+  placeholder?: string;
+  icon?: React.ReactNode;
+  isHref?: boolean;
+}) {
   const [filterValue, setFilterValue] = React.useState("");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [sortDescriptor, setSortDescriptor] = React.useState({
@@ -39,7 +46,9 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
     direction: "ascending",
   });
   const [page, setPage] = React.useState(1);
-  const [visibleColumns, setVisibleColumns] = React.useState(new Set(columns.map(col => col.key)));
+  const [visibleColumns, setVisibleColumns] = React.useState(
+    new Set(columns.map((col) => col.key)),
+  );
   const pathname = usePathname();
 
   const hasSearchFilter = Boolean(filterValue);
@@ -49,9 +58,9 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
 
     if (hasSearchFilter) {
       filteredRows = filteredRows.filter((row) =>
-        Object.values(row).some(val =>
-          String(val).toLowerCase().includes(filterValue.toLowerCase())
-        )
+        Object.values(row).some((val) =>
+          String(val).toLowerCase().includes(filterValue.toLowerCase()),
+        ),
       );
     }
 
@@ -77,18 +86,29 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
     });
   }, [sortDescriptor, items]);
 
-  const renderCell = React.useCallback((row: any, columnKey: any) => {
-    const cellValue = getKeyValue(row, columnKey);
-    if (columnKey === columns[0].key) { // assumindo que a primeira coluna deve ser o link
-      return (
-        <Link href={isHref ? `/${pathname.split("/")[1]}/${row[columnKey]}` : "#"} className="flex items-center gap-2">
-          {icon}
-          <p className="text-blue-600 font-semibold hover:underline">{cellValue}</p>
-        </Link>
-      );
-    }
-    return cellValue;
-  }, [columns]);
+  const renderCell = React.useCallback(
+    (row: any, columnKey: any) => {
+      const cellValue = getKeyValue(row, columnKey);
+
+      if (columnKey === columns[0].key) {
+        // assumindo que a primeira coluna deve ser o link
+        return (
+          <Link
+            className="flex items-center gap-2"
+            href={isHref ? `/${pathname.split("/")[1]}/${row[columnKey]}` : "#"}
+          >
+            {icon}
+            <p className="text-blue-600 font-semibold hover:underline">
+              {cellValue}
+            </p>
+          </Link>
+        );
+      }
+
+      return cellValue;
+    },
+    [columns],
+  );
   const onNextPage = React.useCallback(() => {
     if (page < pages) {
       setPage(page + 1);
@@ -130,7 +150,9 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
           />
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-default-400 text-small">Total {rows.length} items</span>
+          <span className="text-default-400 text-small">
+            Total {rows.length} items
+          </span>
           <label className="flex items-center text-default-400 text-small gap-2">
             Linhas por página:
             <select
@@ -160,10 +182,20 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
           onChange={setPage}
         />
         <div className="hidden sm:flex w-[30%] justify-end gap-2">
-          <Button isDisabled={page <= 1} size="sm" variant="flat" onPress={onPreviousPage}>
+          <Button
+            isDisabled={page <= 1}
+            size="sm"
+            variant="flat"
+            onPress={onPreviousPage}
+          >
             Previous
           </Button>
-          <Button isDisabled={page >= pages} size="sm" variant="flat" onPress={onNextPage}>
+          <Button
+            isDisabled={page >= pages}
+            size="sm"
+            variant="flat"
+            onPress={onNextPage}
+          >
             Next
           </Button>
         </div>
@@ -173,8 +205,8 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
 
   return (
     <Table
-      aria-label="Example table with dynamic content"
       isHeaderSticky
+      aria-label="Example table with dynamic content"
       bottomContent={bottomContent}
       bottomContentPlacement="outside"
       classNames={{
@@ -184,30 +216,35 @@ export default function TableComponent({ rows, columns, placeholder, icon, isHre
       topContent={topContent}
       topContentPlacement="outside"
       onSortChange={setSortDescriptor as any}
-
     >
-      {columns &&
+      {columns && (
         <TableHeader columns={columns}>
           {(column) => (
-            <TableColumn
-              key={column.key}
-              align="start"
-              allowsSorting
-            >
+            <TableColumn key={column.key} allowsSorting align="start">
               {column.label}
             </TableColumn>
           )}
         </TableHeader>
-      }
-      <TableBody emptyContent={
-        <div className='flex flex-col items-center justify-center gap-4'>
-          <h3 className="font-bold text-xl text-stone-950">Nenhum resultado encontrado</h3>
-          <p className="max-w-sm">Nenhum(a) {columns[0].label} corresponde aos critérios de pesquisa.</p>
-        </div>
-      } items={sortedItems ? sortedItems : []}>
+      )}
+      <TableBody
+        emptyContent={
+          <div className="flex flex-col items-center justify-center gap-4">
+            <h3 className="font-bold text-xl text-stone-950">
+              Nenhum resultado encontrado
+            </h3>
+            <p className="max-w-sm">
+              Nenhum(a) {columns[0].label} corresponde aos critérios de
+              pesquisa.
+            </p>
+          </div>
+        }
+        items={sortedItems ? sortedItems : []}
+      >
         {(item) => (
           <TableRow key={item.key}>
-            {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
+            {(columnKey) => (
+              <TableCell>{renderCell(item, columnKey)}</TableCell>
+            )}
           </TableRow>
         )}
       </TableBody>

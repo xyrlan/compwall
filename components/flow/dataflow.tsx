@@ -1,5 +1,5 @@
-"use client"
-import React, { useCallback } from 'react';
+"use client";
+import React, { useCallback } from "react";
 import {
   ReactFlow,
   Controls,
@@ -8,94 +8,134 @@ import {
   addEdge,
   Node,
   Edge,
-} from '@xyflow/react';
-import '@xyflow/react/dist/base.css';
-import turboNode, { TurboNodeData } from './turbo-node';
-import TurboEdge from './turbo-edge';
-import FunctionIcon from './function-icon';
+} from "@xyflow/react";
 
+import "@xyflow/react/dist/base.css";
+import turboNode, { TurboNodeData } from "./turbo-node";
+import TurboEdge from "./turbo-edge";
+import FunctionIcon from "./function-icon";
 
 const initialNodes: Node<TurboNodeData>[] = [
   {
-    id: '1',
+    id: "1",
     position: { x: 0, y: 50 },
-    data: { icon: <FunctionIcon />, title: 'Batch Data Source', subline: 'users' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Batch Data Source",
+      subline: "users",
+    },
+    type: "turbo",
   },
   {
-    id: '2',
+    id: "2",
     position: { x: 0, y: 250 },
-    data: { icon: <FunctionIcon />, title: 'Stream Data Source', subline: 'transactions_stream' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Stream Data Source",
+      subline: "transactions_stream",
+    },
+    type: "turbo",
   },
   {
-    id: '3',
+    id: "3",
     position: { x: 0, y: 450 },
-    data: { icon: <FunctionIcon />, title: 'Batch Data Source', subline: 'transactions_batch' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Batch Data Source",
+      subline: "transactions_batch",
+    },
+    type: "turbo",
   },
   {
-    id: '4',
+    id: "4",
     position: { x: 350, y: 50 },
-    data: { icon: <FunctionIcon />, title: 'Batch Feature View', subline: 'user_credit_card_issuer' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Batch Feature View",
+      subline: "user_credit_card_issuer",
+    },
+    type: "turbo",
   },
   {
-    id: '5',
+    id: "5",
     position: { x: 350, y: 250 },
-    data: { icon: <FunctionIcon />, title: 'Stream Feature View', subline: 'user_transaction_amount_totals' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Stream Feature View",
+      subline: "user_transaction_amount_totals",
+    },
+    type: "turbo",
   },
   {
-    id: '6',
+    id: "6",
     position: { x: 350, y: 450 },
-    data: { icon: <FunctionIcon />, title: 'Batch Feature View', subline: 'user_transaction_metrics' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Batch Feature View",
+      subline: "user_transaction_metrics",
+    },
+    type: "turbo",
   },
   {
-    id: '7',
+    id: "7",
     position: { x: 700, y: 250 },
-    data: { icon: <FunctionIcon />, title: 'Online Store / Offline Store' },
-    type: 'turbo',
-    style: { width: 100, height: 100, borderRadius: '50%' }, // Estilo especial para o nó 7
+    data: { icon: <FunctionIcon />, title: "Online Store / Offline Store" },
+    type: "turbo",
+    style: { width: 100, height: 100, borderRadius: "50%" }, // Estilo especial para o nó 7
   },
   {
-    id: '8',
+    id: "8",
     position: { x: 950, y: 50 },
-    data: { icon: <FunctionIcon />, title: 'On-Demand Feature View', subline: 'transaction_amount_is_higher_than_average' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "On-Demand Feature View",
+      subline: "transaction_amount_is_higher_than_average",
+    },
+    type: "turbo",
   },
   {
-    id: '9',
+    id: "9",
     position: { x: 1350, y: 50 },
-    data: { icon: <FunctionIcon />, title: 'Feature Service', subline: 'fraud_detection_feature_service_v2' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Feature Service",
+      subline: "fraud_detection_feature_service_v2",
+    },
+    type: "turbo",
   },
   {
-    id: '10',
+    id: "10",
     position: { x: 1350, y: 250 },
-    data: { icon: <FunctionIcon />, title: 'Feature Service', subline: 'fraud_detection_feature_service_streaming' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Feature Service",
+      subline: "fraud_detection_feature_service_streaming",
+    },
+    type: "turbo",
   },
   {
-    id: '11',
+    id: "11",
     position: { x: 1350, y: 450 },
-    data: { icon: <FunctionIcon />, title: 'Feature Service', subline: 'fraud_detection_feature_service' },
-    type: 'turbo',
+    data: {
+      icon: <FunctionIcon />,
+      title: "Feature Service",
+      subline: "fraud_detection_feature_service",
+    },
+    type: "turbo",
   },
 ];
 
 const initialEdges: Edge[] = [
-  { id: 'e1-4', source: '1', target: '4' },
-  { id: 'e2-5', source: '2', target: '5' },
-  { id: 'e3-6', source: '3', target: '6' },
-  { id: 'e4-7', source: '4', target: '7' },
-  { id: 'e5-7', source: '5', target: '7' },
-  { id: 'e6-7', source: '6', target: '7' },
-  { id: 'e7-8', source: '7', target: '8' },
-  { id: 'e8-9', source: '8', target: '9' },
-  { id: 'e7-10', source: '7', target: '10' },
-  { id: 'e7-11', source: '7', target: '11' },
+  { id: "e1-4", source: "1", target: "4" },
+  { id: "e2-5", source: "2", target: "5" },
+  { id: "e3-6", source: "3", target: "6" },
+  { id: "e4-7", source: "4", target: "7" },
+  { id: "e5-7", source: "5", target: "7" },
+  { id: "e6-7", source: "6", target: "7" },
+  { id: "e7-8", source: "7", target: "8" },
+  { id: "e8-9", source: "8", target: "9" },
+  { id: "e7-10", source: "7", target: "10" },
+  { id: "e7-11", source: "7", target: "11" },
 ];
 
 const nodeTypes = {
@@ -107,8 +147,8 @@ const edgeTypes = {
 };
 
 const defaultEdgeOptions = {
-  type: 'turbo',
-  markerEnd: 'edge-circle',
+  type: "turbo",
+  markerEnd: "edge-circle",
 };
 
 const Flow = () => {
@@ -122,16 +162,16 @@ const Flow = () => {
 
   return (
     <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
       fitView
-      nodeTypes={nodeTypes}
-      edgeTypes={edgeTypes}
       defaultEdgeOptions={defaultEdgeOptions}
+      edgeTypes={edgeTypes}
+      edges={edges}
       maxZoom={1}
+      nodeTypes={nodeTypes}
+      nodes={nodes}
+      onConnect={onConnect}
+      onEdgesChange={onEdgesChange}
+      onNodesChange={onNodesChange}
     >
       <Controls showInteractive={false} />
       <svg>
@@ -143,15 +183,15 @@ const Flow = () => {
 
           <marker
             id="edge-circle"
-            viewBox="-5 -5 10 10"
-            refX="0"
-            refY="0"
+            markerHeight="10"
             markerUnits="strokeWidth"
             markerWidth="10"
-            markerHeight="10"
             orient="auto"
+            refX="0"
+            refY="0"
+            viewBox="-5 -5 10 10"
           >
-            <circle stroke="#fefefe" strokeOpacity="0.75" r="2" cx="0" cy="0" />
+            <circle cx="0" cy="0" r="2" stroke="#fefefe" strokeOpacity="0.75" />
           </marker>
         </defs>
       </svg>

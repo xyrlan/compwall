@@ -1,18 +1,30 @@
 import React from "react";
 import { Listbox, ListboxItem, ListboxSection } from "@nextui-org/react";
-import { AreaChart, Code, Database, Group, KeyIcon, Layers3, Pickaxe, Pyramid, TvMinimal, User, Waypoints } from "lucide-react";
+import {
+  AreaChart,
+  Code,
+  Database,
+  Group,
+  KeyIcon,
+  Layers3,
+  Pickaxe,
+  Pyramid,
+  TvMinimal,
+  User,
+  Waypoints,
+} from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function SidebarListbox() {
   const router = useRouter();
   const [selectedKey, setSelectedKey] = React.useState("overview");
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   React.useEffect(() => {
     if (pathname === "/") {
-      setSelectedKey("overview")
+      setSelectedKey("overview");
     } else {
-      setSelectedKey(pathname.split("/")[1])
+      setSelectedKey(pathname.split("/")[1]);
     }
   }, [pathname]);
 
@@ -74,7 +86,7 @@ export default function SidebarListbox() {
           title: "Monitoramento",
           key: "monitoring",
           icon: <AreaChart />,
-        }
+        },
       ],
     },
     {
@@ -86,28 +98,31 @@ export default function SidebarListbox() {
           icon: <User />,
         },
       ],
-    }
-  ]
+    },
+  ];
 
   return (
-
-    <Listbox variant="flat" aria-label="Listbox menu with sections">
+    <Listbox aria-label="Listbox menu with sections" variant="flat">
       {listboxSections.map((section, index) => (
-        <ListboxSection key={index} title={section.title} showDivider>
+        <ListboxSection key={index} showDivider title={section.title}>
           {section.items.map((item, index) => (
-            <ListboxItem key={index} startContent={item.icon} className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`} onClick={() => {
-              if (item.key === "overview") {
-                router.push("/")
-              } else {
-                router.push(`/${item.key}`)
-              }
-            }}>
+            <ListboxItem
+              key={index}
+              className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`}
+              startContent={item.icon}
+              onClick={() => {
+                if (item.key === "overview") {
+                  router.push("/");
+                } else {
+                  router.push(`/${item.key}`);
+                }
+              }}
+            >
               {item.title}
             </ListboxItem>
           ))}
         </ListboxSection>
       ))}
     </Listbox>
-
   );
 }

@@ -2,7 +2,7 @@ export const columns = [
   { key: "email", label: "Email" },
   { key: "status", label: "Status" },
   { key: "created", label: "Criado" },
-  { key: "lastLogin", label: "Último Login" }
+  { key: "lastLogin", label: "Último Login" },
 ];
 
 export const rows = [
@@ -11,6 +11,6 @@ export const rows = [
     email: "dinoamaral@bb.com.br",
     status: "active",
     created: "2024-04-18",
-    lastLogin: "2024-06-12"
-  }
+    lastLogin: "2024-06-12",
+  },
 ];

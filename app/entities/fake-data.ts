@@ -7,7 +7,7 @@ export const columns = [
   { key: "lastUpdatedBy", label: "Última Atualização Por" },
   { key: "lastUpdated", label: "Última Atualização" },
   { key: "owner", label: "Proprietário" },
-  { key: "created", label: "Criado" }
+  { key: "created", label: "Criado" },
 ];
 
 export const rows = [
@@ -21,6 +21,6 @@ export const rows = [
     lastUpdatedBy: "matt@tecton.ai",
     lastUpdated: "2024-02-07 18:23",
     owner: "n/a",
-    created: "2024-02-07 18:23"
-  }
+    created: "2024-02-07 18:23",
+  },
 ];

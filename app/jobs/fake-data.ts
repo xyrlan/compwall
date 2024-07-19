@@ -9,6 +9,6 @@ export const data = [
     Inicio_da_janela_de_materializacao: "2024-06-11T00:00:00Z",
     Fim_da_janela_de_materializacao: "2024-06-12T00:00:00Z",
     Materializacao_online: "enabled",
-    Materializacao_offline: "enabled"
-  }
+    Materializacao_offline: "enabled",
+  },
 ];

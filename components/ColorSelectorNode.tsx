@@ -1,38 +1,38 @@
-import React, { memo } from 'react';
-import { Handle, Position } from '@xyflow/react';
+import React, { memo } from "react";
+import { Handle, Position } from "@xyflow/react";
 
 export default memo(({ data, isConnectable }: any) => {
   return (
     <>
       <Handle
-        type="target"
-        position={Position.Left}
-        style={{ background: '#555' }}
-        onConnect={(params) => console.log('handle onConnect', params)}
         isConnectable={isConnectable}
+        position={Position.Left}
+        style={{ background: "#555" }}
+        type="target"
+        onConnect={(params) => console.log("handle onConnect", params)}
       />
       <div>
         Custom Color Picker Node: <strong>{data.color}</strong>
       </div>
       <input
         className="nodrag"
+        defaultValue={data.color}
         type="color"
         onChange={data.onChange}
-        defaultValue={data.color}
       />
       <Handle
-        type="source"
-        position={Position.Right}
         id="a"
-        style={{ top: 10, background: '#555' }}
         isConnectable={isConnectable}
+        position={Position.Right}
+        style={{ top: 10, background: "#555" }}
+        type="source"
       />
       <Handle
-        type="source"
-        position={Position.Right}
         id="b"
-        style={{ bottom: 10, top: 'auto', background: '#555' }}
         isConnectable={isConnectable}
+        position={Position.Right}
+        style={{ bottom: 10, top: "auto", background: "#555" }}
+        type="source"
       />
     </>
   );
