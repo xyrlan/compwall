@@ -26,7 +26,7 @@ export default function SidebarListbox() {
           icon: <TvMinimal />,
         },
         {
-          title: "Fontes",
+          title: "Sources",
           key: "sources",
           icon: <Waypoints />,
         },
@@ -51,7 +51,7 @@ export default function SidebarListbox() {
           icon: <Pyramid />,
         },
         {
-          title: "Dados",
+          title: "Datasets",
           key: "datasets",
           icon: <Database />,
         },

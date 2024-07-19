@@ -11,14 +11,13 @@ export default function TabsComponent({ items }: { items: { name: string, key: s
         aria-label="Options"
         selectedKey={selected}
         onSelectionChange={setSelected as any}
+        className="sticky top-16 z-50"
       >
         {items.map((item, index) => (
           <Tab key={item.key} title={item.name}>
-            <Card>
-              <CardBody className="min-h-[900px]">
+
                 {item.content}
-              </CardBody>
-            </Card>
+       
           </Tab>
         ))}
       </Tabs>

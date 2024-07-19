@@ -31,7 +31,7 @@ type Row = {
   [key: string]: any;
 };
 
-export default function TableComponent({ rows, columns, placeholder, icon }: { rows: Row[], columns: Column[], placeholder?: string, icon?: React.ReactNode }) {
+export default function TableComponent({ rows, columns, placeholder, icon, isHref }: { rows: Row[], columns: Column[], placeholder?: string, icon?: React.ReactNode, isHref?: boolean }) {
   const [filterValue, setFilterValue] = React.useState("");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [sortDescriptor, setSortDescriptor] = React.useState({
@@ -49,7 +49,7 @@ export default function TableComponent({ rows, columns, placeholder, icon }: { r
 
     if (hasSearchFilter) {
       filteredRows = filteredRows.filter((row) =>
-        Object.values(row).some(val => 
+        Object.values(row).some(val =>
           String(val).toLowerCase().includes(filterValue.toLowerCase())
         )
       );
@@ -81,7 +81,7 @@ export default function TableComponent({ rows, columns, placeholder, icon }: { r
     const cellValue = getKeyValue(row, columnKey);
     if (columnKey === columns[0].key) { // assumindo que a primeira coluna deve ser o link
       return (
-        <Link href={`/${pathname.split("/")[1]}/${row[columnKey]}`} className="flex items-center gap-2">
+        <Link href={isHref ? `/${pathname.split("/")[1]}/${row[columnKey]}` : "#"} className="flex items-center gap-2">
           {icon}
           <p className="text-blue-600 font-semibold hover:underline">{cellValue}</p>
         </Link>
@@ -184,19 +184,27 @@ export default function TableComponent({ rows, columns, placeholder, icon }: { r
       topContent={topContent}
       topContentPlacement="outside"
       onSortChange={setSortDescriptor as any}
+
     >
-      <TableHeader columns={columns}>
-        {(column) => (
-          <TableColumn
-            key={column.key}
-            align="start"
-            allowsSorting
-          >
-            {column.label}
-          </TableColumn>
-        )}
-      </TableHeader>
-      <TableBody emptyContent={"No items found"} items={sortedItems}>
+      {columns &&
+        <TableHeader columns={columns}>
+          {(column) => (
+            <TableColumn
+              key={column.key}
+              align="start"
+              allowsSorting
+            >
+              {column.label}
+            </TableColumn>
+          )}
+        </TableHeader>
+      }
+      <TableBody emptyContent={
+        <div className='flex flex-col items-center justify-center gap-4'>
+          <h3 className="font-bold text-xl text-stone-950">Nenhum resultado encontrado</h3>
+          <p className="max-w-sm">Nenhum(a) {columns[0].label} corresponde aos critérios de pesquisa.</p>
+        </div>
+      } items={sortedItems ? sortedItems : []}>
         {(item) => (
           <TableRow key={item.key}>
             {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}

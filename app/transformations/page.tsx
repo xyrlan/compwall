@@ -13,7 +13,7 @@ const TransformationsPage = () => {
         <h1 className={subtitle()}>Transformações</h1>
         <p>Transformações definem a lógica para transformar dados brutos em características.</p>
       </div>
-      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar transformações' icon={<Code size={15} />} />
+      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar transformações' icon={<Code size={15} />} isHref />
     </div>
   )
 }

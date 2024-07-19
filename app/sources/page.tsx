@@ -13,7 +13,7 @@ const SourcesPage = () => {
         <h1 className={subtitle()}>Fontes de dados</h1>
         <p>As fontes de dados definem como a HookZ se conecta a dados em lote e streaming</p>
       </div>
-      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar fontes de dados' icon={<Waypoints size={15} />} />
+      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar fontes de dados' icon={<Waypoints size={15} />} isHref />
     </div>
   )
 }

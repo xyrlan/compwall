@@ -14,7 +14,7 @@ const FeaturesPage = () => {
         <p>As Visualizações de Recursos definem como as transformações são executadas nas entradas da fonte de dados para criar valores de recursos.</p>
         <p>As Tabelas de Recursos permitem a ingestão de recursos existentes diretamente no Armazenamento de Recursos.</p>
       </div>
-      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar recursos' icon={<Layers3 size={15} />} />
+      <TableComponent rows={rows} columns={columns} placeholder='Pesquisar recursos' icon={<Layers3 size={15} />} isHref />
     </div>
   )
 }
