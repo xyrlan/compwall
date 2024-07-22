@@ -42,9 +42,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <Navbar />
-          <Sidebar /> 
-          <main className="pt-8 px-10 flex-grow ml-[250px] min-h-screen bg-slate-100 dark:bg-stone-950">
+          <main className=" min-h-screen bg-slate-100 dark:bg-stone-950 " >
             {children}
           </main>
         </Providers>
