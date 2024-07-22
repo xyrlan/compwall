@@ -83,7 +83,7 @@ const JobsPage = () => {
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
                 <p className="block font-semibold text-gray-800 mb-2 ">
-                  Pyton
+                  Script ETL (SQL)
                 </p>
                 <p className="text-sm text-gray-600 ">
                   Avaliando pipelines de visualização de recursos

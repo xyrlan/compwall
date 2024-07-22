@@ -1,13 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-import { Sidebar } from "@/components/sidebar";
+import { Providers } from "../providers";
 
-import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -42,8 +39,8 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <Navbar />
-          <Sidebar /> 
+          {/* <Navbar />
+          <Sidebar />  */}
           <main className="pt-8 px-10 flex-grow ml-[250px] min-h-screen bg-slate-100 dark:bg-stone-950">
             {children}
           </main>

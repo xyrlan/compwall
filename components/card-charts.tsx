@@ -10,7 +10,7 @@ const CardCharts = ({
 }) => {
   return (
     <div className="rounded-xl">
-      <h3 className="flex flex-row items-center font-medium bg-gray-200 py-4 px-4 rounded-t-xl">
+      <h3 className="flex flex-row items-center font-medium bg-gray-200 dark:bg-stone-800 py-4 px-4 rounded-t-xl">
         {title}
       </h3>
       <Divider />

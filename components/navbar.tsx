@@ -11,6 +11,7 @@ import { Logo } from "@/components/icons";
 
 import SelectComponent, { SelectData } from "./select";
 import SearchInput from "./search-input";
+import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   const selectData: SelectData = {

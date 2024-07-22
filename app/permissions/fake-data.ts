@@ -6,17 +6,32 @@ export const columns = [
 export const rows = [
   {
     key: "1",
-    email: "elon@abc.ai",
-    role: "Owner",
+    email: "dino@hookz.com.br",
+    role: "Administrator",
   },
   {
     key: "2",
-    email: "jonan@abc.ai",
-    role: "Trial Consumer",
+    email: "josias@hookz.com.br",
+    role: "Administrador",
   },
   {
     key: "3",
-    email: "mahesh@abc.ai",
+    email: "daniel@hookz.com.br",
     role: "Administrator",
+  },
+  {
+    key: "4",
+    email: "yokemura@hookz.com.br",
+    role: "Administrador",
+  },
+  {
+    key: "5",
+    email: "everton@hookz.com.br",
+    role: "Administrador",
+  },
+  {
+    key: "6",
+    email: "filipe@hookz.com.br",
+    role: "Administrador",
   },
 ];

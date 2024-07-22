@@ -190,22 +190,30 @@ const FeaturePage = () => {
                     yLabel="Freshness"
                   />
                 </CardCharts>
-                <CardCharts title="Metricas do DynamoDB">
+                <CardCharts title="Metricas do NoSQL(HBase)">
                   <GenericLineChart
                     data={queryLatencyData}
-                    title="DynamoDB Serving Query Latency"
+                    title="NoSQL Serving Query Latency (HBase)"
                     xLabel="Time (Local)"
                     yFormat={(d) => `${d} ms`}
                     yLabel="Latency (ms)"
                   />
                   <GenericLineChart
                     data={rowCountData}
-                    title="DynamoDB Row Count"
+                    title="NoSQL Row Count (HBase)"
+                    xLabel="Time (Local)"
+                    yFormat={(d) => `${d}`}
+                    yLabel="Count"
+                  />
+                  <GenericLineChart
+                    data={rowCountData}
+                    title="Stream Messaging"
                     xLabel="Time (Local)"
                     yFormat={(d) => `${d}`}
                     yLabel="Count"
                   />
                 </CardCharts>
+               
               </>
             ),
           },
