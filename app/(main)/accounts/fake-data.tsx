@@ -49,5 +49,12 @@ export const rows = [
     created: "2024-04-18",
     lastLogin: "2024-06-12",
   },
+  {
+    key: "7",
+    email: "fernando@hookz.com.br",
+    status: "active",
+    created: "2024-04-18",
+    lastLogin: "2024-06-12",
+  }
 
 ];

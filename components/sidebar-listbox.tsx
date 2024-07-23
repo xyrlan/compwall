@@ -2,6 +2,7 @@ import React from "react";
 import { Listbox, ListboxItem, ListboxSection } from "@nextui-org/react";
 import {
   AreaChart,
+  ArrowRightLeft,
   Code,
   Database,
   Group,
@@ -61,6 +62,11 @@ export default function SidebarListbox() {
           title: "Serviços",
           key: "services",
           icon: <Pyramid />,
+        },
+        {
+          title: "Transações",
+          key: "transactions",
+          icon: <ArrowRightLeft />,
         },
         {
           title: "Datasets",

@@ -34,4 +34,9 @@ export const rows = [
     email: "filipe@hookz.com.br",
     role: "Administrador",
   },
+  {
+    key: "7",
+    email: "fernando@hookz.com.br",
+    role: "Administrador",
+  }
 ];
