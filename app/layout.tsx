@@ -2,12 +2,10 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
+import { Providers } from "./providers";
+
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-import { Sidebar } from "@/components/sidebar";
-
-import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +40,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <main className=" min-h-screen bg-slate-100 dark:bg-stone-950 " >
+          <main className=" min-h-screen bg-slate-100 dark:bg-stone-950 ">
             {children}
           </main>
         </Providers>

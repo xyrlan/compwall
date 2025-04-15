@@ -1,53 +1,33 @@
-# Next.js & NextUI Template
+# HookZ – Front-end do Sistema de Gestão de Fraudes de Pagamento
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+Bem-vindo ao repositório do front-end do **HookZ**, o sistema de gestão e monitoramento de fraudes em pagamentos. Este projeto tem como objetivo fornecer uma interface moderna, intuitiva e eficiente para análise, acompanhamento e mitigação de riscos de fraude em transações financeiras.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## 🚀 Visão Geral
 
-## Technologies Used
+O HookZ é uma plataforma robusta que oferece:
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
+- **Monitoramento em tempo real** de transações suspeitas.
+- **Alertas inteligentes** com base em regras personalizadas.
+- **Dashboards interativos** com gráficos, métricas e KPIs.
+- **Auditoria e histórico** completo de ações e eventos.
+- **Integração com sistemas de terceiros** via APIs.
+
+Este repositório contém o código-fonte do **front-end**, desenvolvido com foco em performance, responsividade e usabilidade.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+
+- [Next.js](https://nextjs.org/) (React Framework)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [HeroUi](https://www.heroui.com/) – Componentes reutilizáveis
+- [ReactCharts](https://react-charts.tanstack.com/) – Visualização de dados
+- [Framer Motion](https://www.framer.com/motion/) – Animações
 
-## How to Use
+---
 
-### Use the template with create-next-app
+## 📁 Estrutura do Projeto
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+N/A

@@ -4,14 +4,13 @@ import {
   NavbarMenu,
   NavbarMenuToggle,
   NavbarItem,
-} from "@nextui-org/navbar";
+} from "@heroui/navbar";
 import NextLink from "next/link";
-
-import { Logo } from "@/components/icons";
 
 import SelectComponent, { SelectData } from "./select";
 import SearchInput from "./search-input";
-import { ThemeSwitch } from "./theme-switch";
+
+import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const selectData: SelectData = {

@@ -1,18 +1,15 @@
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Layers3 } from "lucide-react";
-
+import { Layers3 } from "lucide-react"
+import { columns, data, rows, serviceColumns, serviceRows } from "../fake-data";
+import MaterializationCards from "./components/materialization-cards";
 import BreadcrumbsComponent from "@/components/bread-crumbs";
 import OverviewCardComponent from "@/components/overview-card-component";
 import TabsComponent from "@/components/tabs-component";
 import TableComponent from "@/components/table-component";
 import CardCharts from "@/components/card-charts";
 import GenericLineChart from "@/components/charts/line-charts";
-
-import { columns, data, rows, serviceColumns, serviceRows } from "../fake-data";
-
-import MaterializationCards from "./components/materialization-cards";
 
 const FeaturePage = () => {
   const pathname = usePathname();
@@ -213,7 +210,6 @@ const FeaturePage = () => {
                     yLabel="Count"
                   />
                 </CardCharts>
-               
               </>
             ),
           },

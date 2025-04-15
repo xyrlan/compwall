@@ -1,10 +1,10 @@
 import { Pyramid } from "lucide-react";
 import React from "react";
 
+import { columns, rows } from "./fake-data";
+
 import { subtitle } from "@/components/primitives";
 import TableComponent from "@/components/table-component";
-
-import { columns, rows } from "./fake-data";
 
 const ServicesPage = () => {
   return (

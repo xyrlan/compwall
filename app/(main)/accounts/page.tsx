@@ -1,11 +1,11 @@
 import React from "react";
 import { User } from "lucide-react";
 
+import { columns, rows } from "./fake-data";
+
 import { subtitle } from "@/components/primitives";
 import TabsComponent from "@/components/tabs-component";
 import TableComponent from "@/components/table-component";
-
-import { columns, rows } from "./fake-data";
 
 const AccountsPage = () => {
   return (

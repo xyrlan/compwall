@@ -2,15 +2,15 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 
+import { columns, data, rows } from "../fake-data";
+
+import ServiceMaterializationCards from "./components/materialization-cards";
+
 import BreadcrumbsComponent from "@/components/bread-crumbs";
 import OverviewCardComponent from "@/components/overview-card-component";
 import TabsComponent from "@/components/tabs-component";
 import CardCharts from "@/components/card-charts";
 import GenericLineChart from "@/components/charts/line-charts";
-
-import { columns, data, rows } from "../fake-data";
-
-import ServiceMaterializationCards from "./components/materialization-cards";
 
 const ServicePage = () => {
   const pathname = usePathname();

@@ -1,5 +1,5 @@
 import React from "react";
-import { Listbox, ListboxItem, ListboxSection } from "@nextui-org/react";
+import { Listbox, ListboxItem, ListboxSection } from "@heroui/react";
 import {
   AreaChart,
   ArrowRightLeft,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider } from "@heroui/react";
 import { usePathname } from "next/navigation";
 
 interface Column {

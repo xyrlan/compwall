@@ -8,7 +8,7 @@ export const columns = [
   { key: "endereco_ip", label: "Endereço IP" },
   { key: "latitude", label: "Latitude" },
   { key: "longitude", label: "Longitude" },
-  { key: "score", label: "Score" }
+  { key: "score", label: "Score" },
 ];
 
 export const rows = [
@@ -23,7 +23,7 @@ export const rows = [
     endereco_ip: "187.114.109.76",
     latitude: "-42.0028829",
     longitude: "-22.8889525",
-    score: "0.94846458"
+    score: "0.94846458",
   },
   {
     key: "2",
@@ -36,7 +36,7 @@ export const rows = [
     endereco_ip: "189.95.19.76",
     latitude: "-43.36239224",
     longitude: "-22.8889525",
-    score: "0.43535337"
+    score: "0.43535337",
   },
   {
     key: "3",
@@ -49,7 +49,7 @@ export const rows = [
     endereco_ip: "177.58.35.125",
     latitude: "-43.3685675",
     longitude: "-22.8194487",
-    score: "0.14235363"
+    score: "0.14235363",
   },
   {
     key: "5",
@@ -62,7 +62,7 @@ export const rows = [
     endereco_ip: "179.67.48.209",
     latitude: "-43.2717719",
     longitude: "-22.90629062",
-    score: "0.78595744"
+    score: "0.78595744",
   },
   {
     key: "6",
@@ -75,7 +75,7 @@ export const rows = [
     endereco_ip: "189.122.210.27",
     latitude: "-43.190476",
     longitude: "-22.97442743",
-    score: "0.00023482"
+    score: "0.00023482",
   },
   {
     key: "8",
@@ -88,7 +88,7 @@ export const rows = [
     endereco_ip: "189.40.80.171",
     latitude: "-43.3405014",
     longitude: "-22.9436126",
-    score: "0.98374644"
+    score: "0.98374644",
   },
   {
     key: "10",
@@ -101,7 +101,7 @@ export const rows = [
     endereco_ip: "189.94.48.104",
     latitude: "-43.1856764",
     longitude: "-22.9055747",
-    score: "0.00000333"
+    score: "0.00000333",
   },
   {
     key: "12",
@@ -114,7 +114,7 @@ export const rows = [
     endereco_ip: "179.218.123.118",
     latitude: "-43.2186751",
     longitude: "-22.9834281",
-    score: "0.45464744"
+    score: "0.45464744",
   },
   {
     key: "14",
@@ -127,7 +127,7 @@ export const rows = [
     endereco_ip: "200.202.107.222",
     latitude: "-42.7507066",
     longitude: "-22.9450183",
-    score: "0.43535353"
+    score: "0.43535353",
   },
   {
     key: "16",
@@ -140,7 +140,7 @@ export const rows = [
     endereco_ip: "187.180.191.4",
     latitude: "-47.5069157",
     longitude: "-23.4434854",
-    score: "0.23457363"
+    score: "0.23457363",
   },
   {
     key: "18",
@@ -153,7 +153,7 @@ export const rows = [
     endereco_ip: "179.218.208.117",
     latitude: "-43.2000141",
     longitude: "-22.9812815",
-    score: "0.53464747"
+    score: "0.53464747",
   },
   {
     key: "20",
@@ -166,7 +166,7 @@ export const rows = [
     endereco_ip: "179.66.180.159",
     latitude: "-42.0028899",
     longitude: "-22.6378431",
-    score: "0.34333444"
+    score: "0.34333444",
   },
   {
     key: "22",
@@ -179,7 +179,7 @@ export const rows = [
     endereco_ip: "179.146.140.238",
     latitude: "-40.8312953",
     longitude: "-21.0474182",
-    score: "0.12567883"
+    score: "0.12567883",
   },
   {
     key: "24",
@@ -192,7 +192,7 @@ export const rows = [
     endereco_ip: "45.71.147.97",
     latitude: "-43.4489781",
     longitude: "-22.7459002",
-    score: "0.78787954"
+    score: "0.78787954",
   },
   {
     key: "26",
@@ -205,6 +205,6 @@ export const rows = [
     endereco_ip: "189.25.68.32",
     latitude: "-43.1636655",
     longitude: "-22.5065596",
-    score: "0.45672453"
-  }
+    score: "0.45672453",
+  },
 ];

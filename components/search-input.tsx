@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@nextui-org/input";
+import { Input } from "@heroui/input";
 import { SearchIcon } from "lucide-react";
 
 const SearchInput = ({ placeholder }: { placeholder: string }) => {

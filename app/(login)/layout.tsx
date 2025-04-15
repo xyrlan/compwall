@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
+import { Viewport } from "next";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -13,11 +13,5 @@ export default function LoginLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-
-    <main className="" >
-      {children}
-    </main>
-
-  );
+  return <main className="">{children}</main>;
 }

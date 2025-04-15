@@ -5,7 +5,6 @@ export const columns = [
   { key: "lastLogin", label: "Último Login" },
 ];
 
-
 export const rows = [
   {
     key: "1",
@@ -55,6 +54,5 @@ export const rows = [
     status: "active",
     created: "2024-04-18",
     lastLogin: "2024-06-12",
-  }
-
+  },
 ];

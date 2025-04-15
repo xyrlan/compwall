@@ -3,11 +3,6 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { Pyramid } from "lucide-react";
 
-import BreadcrumbsComponent from "@/components/bread-crumbs";
-import OverviewCardComponent from "@/components/overview-card-component";
-import TabsComponent from "@/components/tabs-component";
-import TableComponent from "@/components/table-component";
-
 import {
   columns,
   data,
@@ -15,6 +10,11 @@ import {
   featureViewRows,
   rows,
 } from "../fake-data";
+
+import BreadcrumbsComponent from "@/components/bread-crumbs";
+import OverviewCardComponent from "@/components/overview-card-component";
+import TabsComponent from "@/components/tabs-component";
+import TableComponent from "@/components/table-component";
 
 const TransformationPage = () => {
   const pathname = usePathname();

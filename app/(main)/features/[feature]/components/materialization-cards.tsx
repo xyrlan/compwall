@@ -1,15 +1,15 @@
 import React from "react";
-import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider } from "@heroui/react";
 import { ArrowRight } from "lucide-react";
-
-import TableComponent from "@/components/table-component";
-import OverviewCardComponent from "@/components/overview-card-component";
 
 import {
   materializationColumns,
   materializationData,
   materializationRows,
 } from "../../fake-data";
+
+import TableComponent from "@/components/table-component";
+import OverviewCardComponent from "@/components/overview-card-component";
 
 const MaterializationCards = () => {
   return (

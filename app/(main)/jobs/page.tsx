@@ -1,18 +1,16 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider } from "@heroui/react";
 import { Dot } from "lucide-react";
 
-import { subtitle } from "@/components/primitives";
-
 import { data } from "./fake-data";
+
+import { subtitle } from "@/components/primitives";
 
 const JobsPage = () => {
   const renderRowData = (p: string, value: string) => (
     <div key={p} className="flex justify-between">
-      <p className="block text-sm font-semibold text-gray-800">
-        {p}
-      </p>
+      <p className="block text-sm font-semibold text-gray-800">{p}</p>
       <p className="text-sm text-gray-600">{value}</p>
     </div>
   );
@@ -22,7 +20,6 @@ const JobsPage = () => {
       <div className="mb-10">
         <h1 className={subtitle()}>Tarefas</h1>
       </div>
-
       <div className="rounded-xl">
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
           {data.map((config, index) => (
@@ -65,9 +62,7 @@ const JobsPage = () => {
           <Card>
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
-                <p className="block font-semibold text-gray-800 mb-2">
-                  Pyton
-                </p>
+                <p className="block font-semibold text-gray-800 mb-2">Pyton</p>
                 <p className="text-sm text-gray-600">Lendo Data Source</p>
               </div>
               <Divider className="h-14" orientation="vertical" />

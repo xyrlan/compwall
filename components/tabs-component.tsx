@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Tabs, Tab } from "@nextui-org/react";
+import { Tabs, Tab } from "@heroui/react";
 
 export default function TabsComponent({
   items,
@@ -17,7 +17,7 @@ export default function TabsComponent({
         selectedKey={selected}
         onSelectionChange={setSelected as any}
       >
-        {items.map((item, index) => (
+        {items.map((item) => (
           <Tab key={item.key} title={item.name}>
             {item.content}
           </Tab>

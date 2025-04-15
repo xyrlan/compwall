@@ -6,7 +6,7 @@ import {
   TableRow,
   TableCell,
   TableColumn,
-} from "@nextui-org/react";
+} from "@heroui/react";
 
 const ProcessingTimeline = ({ range }: any) => {
   const [startYear, endYear] = range.split("-").map(Number);
