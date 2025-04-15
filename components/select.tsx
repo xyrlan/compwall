@@ -17,6 +17,7 @@ export default function SelectComponent({
   return (
     <Select
       className="min-w-[250px]"
+      size="sm"
       color="default"
       defaultSelectedKeys={[selectData.options[0].value]}
       items={selectData.options}

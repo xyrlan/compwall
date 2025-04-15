@@ -11,6 +11,7 @@ import SelectComponent, { SelectData } from "./select";
 import SearchInput from "./search-input";
 
 import { Logo } from "@/components/icons";
+import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   const selectData: SelectData = {
@@ -25,26 +26,23 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
-      className="z-50 sticky top-0 bg-[#273343]"
+      className="z-50 sticky top-0 bg-[#273343] lg:px-5"
       classNames={{ wrapper: "px-0" }}
       maxWidth="full"
       position="sticky"
     >
-      <NavbarContent className="w-[250px]" justify="center">
-        <NextLink className="cursor-pointer" href="/">
+      <NavbarContent justify="start" >
+        <NextLink className="cursor-pointer w-[230px]" href="/">
           <Logo height={100} width={100} />
         </NextLink>
-      </NavbarContent>
-      <NavbarContent className="pr-6 flex-row justify-between" justify="start">
         <NavbarItem className="hidden lg:flex ">
           <SelectComponent selectData={selectData} />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex flex-grow">
           <SearchInput placeholder="Search in prod..." />
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex "><ThemeSwitch /></NavbarItem> */}
+        <NavbarItem className="hidden lg:flex "><ThemeSwitch /></NavbarItem>
       </NavbarContent>
-
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <NavbarMenuToggle />
       </NavbarContent>

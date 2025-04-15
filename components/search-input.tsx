@@ -5,6 +5,7 @@ import { SearchIcon } from "lucide-react";
 const SearchInput = ({ placeholder }: { placeholder: string }) => {
   return (
     <Input
+    size="sm"
       fullWidth
       aria-label="Search"
       color="default"

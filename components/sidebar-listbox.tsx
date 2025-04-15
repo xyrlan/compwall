@@ -36,47 +36,47 @@ export default function SidebarListbox() {
         {
           title: "Visão geral",
           key: "overview",
-          icon: <TvMinimal />,
+          icon: <TvMinimal size={18} />,
         },
         {
           title: "Sources",
           key: "sources",
-          icon: <Waypoints />,
+          icon: <Waypoints size={18} />,
         },
         {
           title: "Entidades",
           key: "entities",
-          icon: <Group />,
+          icon: <Group size={18} />,
         },
         {
           title: "Transformações",
           key: "transformations",
-          icon: <Code />,
+          icon: <Code size={18} />,
         },
         {
           title: "Funcionalidades",
           key: "features",
-          icon: <Layers3 />,
+          icon: <Layers3 size={18} />,
         },
         {
           title: "Serviços",
           key: "services",
-          icon: <Pyramid />,
+          icon: <Pyramid size={18} />,
         },
         {
           title: "Transações",
           key: "transactions",
-          icon: <ArrowRightLeft />,
+          icon: <ArrowRightLeft size={18} />,
         },
         {
           title: "Datasets",
           key: "datasets",
-          icon: <Database />,
+          icon: <Database size={18} />,
         },
         {
           title: "Permissões",
           key: "permissions",
-          icon: <KeyIcon />,
+          icon: <KeyIcon size={18} />,
         },
       ],
     },
@@ -86,12 +86,12 @@ export default function SidebarListbox() {
         {
           title: "Tarefas",
           key: "jobs",
-          icon: <Pickaxe />,
+          icon: <Pickaxe size={18} />,
         },
         {
           title: "Monitoramento",
           key: "monitoring",
-          icon: <AreaChart />,
+          icon: <AreaChart size={18} />,
         },
       ],
     },
@@ -114,9 +114,13 @@ export default function SidebarListbox() {
           {section.items.map((item, index) => (
             <ListboxItem
               key={index}
-              className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`}
-              startContent={item.icon}
-              onClick={() => {
+              // className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`}
+              classNames={{
+                title: ` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`,
+
+              }}
+              // startContent={item.icon}
+              onPress={() => {
                 if (item.key === "overview") {
                   router.push("/");
                 } else {
@@ -124,7 +128,10 @@ export default function SidebarListbox() {
                 }
               }}
             >
-              {item.title}
+              <div className="flex items-center gap-2">
+                {item.icon}
+                {item.title}
+              </div>
             </ListboxItem>
           ))}
         </ListboxSection>
