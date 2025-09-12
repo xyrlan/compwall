@@ -1,10 +1,10 @@
-# HookZ – Front-end do Sistema de Gestão de Fraudes de Pagamento
+# compwall – Front-end do Sistema de Gestão de Fraudes de Pagamento
 
-Bem-vindo ao repositório do front-end do **HookZ**, o sistema de gestão e monitoramento de fraudes em pagamentos. Este projeto tem como objetivo fornecer uma interface moderna, intuitiva e eficiente para análise, acompanhamento e mitigação de riscos de fraude em transações financeiras.
+Bem-vindo ao repositório do front-end do **compwall**, o sistema de gestão e monitoramento de fraudes em pagamentos. Este projeto tem como objetivo fornecer uma interface moderna, intuitiva e eficiente para análise, acompanhamento e mitigação de riscos de fraude em transações financeiras.
 
 ## 🚀 Visão Geral
 
-O HookZ é uma plataforma robusta que oferece:
+O compwall é uma plataforma robusta que oferece:
 
 - **Monitoramento em tempo real** de transações suspeitas.
 - **Alertas inteligentes** com base em regras personalizadas.
@@ -17,7 +17,6 @@ Este repositório contém o código-fonte do **front-end**, desenvolvido com foc
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-
 
 - [Next.js](https://nextjs.org/) (React Framework)
 - [TypeScript](https://www.typescriptlang.org/)

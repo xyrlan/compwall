@@ -13,8 +13,8 @@ const SourcesPage = () => {
       <div className="mb-10">
         <h1 className={subtitle()}>Fontes de dados</h1>
         <p>
-          As fontes de dados definem como a HookZ se conecta a dados em lote e
-          streaming
+          As fontes de dados definem como a compwall se conecta a dados em lote
+          e streaming
         </p>
       </div>
       <TableComponent

@@ -18,7 +18,7 @@ export const rows = [
     joinKeys: "user_id",
     featureViews: "3",
     featureServices: "3",
-    lastUpdatedBy: "daniel@hookz.com.br",
+    lastUpdatedBy: "daniel@compwall.com.br",
     lastUpdated: "2024-02-07 18:23",
     owner: "n/a",
     created: "2024-02-07 18:23",

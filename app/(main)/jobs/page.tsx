@@ -34,8 +34,8 @@ const JobsPage = () => {
                     key !== "title" &&
                     renderRowData(
                       key.replace(/_/g, " "),
-                      config[key as keyof typeof config],
-                    ),
+                      config[key as keyof typeof config]
+                    )
                 )}
               </CardBody>
             </Card>
@@ -97,7 +97,7 @@ const JobsPage = () => {
             <CardBody className="flex flex-row gap-4">
               <div className="flex flex-col justify-between w-full">
                 <p className="block font-semibold text-gray-800 mb-2 ">
-                  Agregações Hookz
+                  Agregações compwall
                 </p>
                 <p className="text-sm text-gray-600 ">
                   Computação de características agregadas e junção de resultados
