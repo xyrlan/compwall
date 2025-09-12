@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "HookZ - DEMO",
-  description: "Demonstração do frontend da HookZ com Next.js",
+  name: "Compwall",
+  description: "Demonstração do frontend da Compwall com Next.js",
   navItems: [
     {
       label: "Home",
