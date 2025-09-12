@@ -43,7 +43,7 @@ export default function LoginComponent() {
 
   return (
     <section className="flex flex-col items-center justify-center h-screen relative custom-background">
-      <motion.div
+      {/* <motion.div
         animate={{ x: -400, y: 250 }}
         className="absolute "
         initial={{ x: "50%", y: "70%" }}
@@ -68,18 +68,18 @@ export default function LoginComponent() {
           src="/seta-green-pra-baixo.png"
           width={150}
         />
-      </motion.div>
+      </motion.div> */}
       <motion.div
         animate={{ opacity: 1 }}
         className="w-full flex items-center justify-center"
         initial={{ opacity: 0 }}
-        transition={{ duration: 1, delay: 0.8 }}
+        transition={{ duration: 1 }}
       >
         <Card className="w-full max-w-lg bg-[#273343]  overflow-visible">
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1 }}
           >
             <Logo className={"py-10 mx-auto"} height={150} width={150} />
           </motion.div>
@@ -87,7 +87,7 @@ export default function LoginComponent() {
             animate={{ opacity: 1 }}
             className="space-y-6"
             initial={{ opacity: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1 }}
             onSubmit={loginUser}
           >
             <CardBody className="grid gap-4">

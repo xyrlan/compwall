@@ -157,7 +157,7 @@ const Flow = () => {
 
   const onConnect = useCallback(
     (params: any) => setEdges((els) => addEdge(params, els)),
-    [],
+    []
   );
 
   return (
@@ -177,8 +177,8 @@ const Flow = () => {
       <svg>
         <defs>
           <linearGradient id="edge-gradient">
-            <stop offset="0%" stopColor="#9fbf38" />
-            <stop offset="100%" stopColor="#fefefe" />
+            <stop offset="0%" stopColor="#2596be" />
+            <stop offset="100%" stopColor="#2596be" />
           </linearGradient>
 
           <marker
@@ -191,7 +191,7 @@ const Flow = () => {
             refY="0"
             viewBox="-5 -5 10 10"
           >
-            <circle cx="0" cy="0" r="2" stroke="#fefefe" strokeOpacity="0.75" />
+            <circle cx="0" cy="0" r="2" stroke="#2596be" strokeOpacity="0.75" />
           </marker>
         </defs>
       </svg>

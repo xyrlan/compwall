@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #273343; /* Cor primária */
-  --secondary-color: #9fbf38; /* Cor secundária */
+  --secondary-color: #2596be; /* Cor secundária */
   --bg-color: #fefefe; /* Fundo branco */
   --text-color: #000000; /* Texto preto */
   --node-border-radius: 10px;
@@ -45,7 +45,7 @@
   background: conic-gradient(
     from -160deg at 50% 50%,
     var(--secondary-color) 0deg,
-    #9fbf38 120deg,
+    #2596be 120deg,
     var(--primary-color) 240deg,
     var(--secondary-color) 360deg
   );
@@ -60,9 +60,9 @@
   background: conic-gradient(
     from -160deg at 50% 50%,
     var(--secondary-color) 0deg,
-    #9fbf38 120deg,
+    #2596be 120deg,
     var(--primary-color) 240deg,
-    rgba(42, 246, 76, 0) 360deg
+    rgba(45, 238, 245, 0) 360deg
   );
   animation: spinner 4s linear infinite;
   transform: translate(-50%, -50%) rotate(0deg);

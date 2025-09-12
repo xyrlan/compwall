@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Viewport } from "next";
+import { Providers } from "../providers";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -13,5 +14,9 @@ export default function LoginLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="">{children}</main>;
+  return (
+    <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+      <main className="">{children}</main>
+    </Providers>
+  );
 }

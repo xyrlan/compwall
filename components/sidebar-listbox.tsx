@@ -114,10 +114,9 @@ export default function SidebarListbox() {
           {section.items.map((item, index) => (
             <ListboxItem
               key={index}
-              // className={` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`}
+              // className={` ${selectedKey === item.key ? "text-[#2596be]" : ""}`}
               classNames={{
-                title: ` ${selectedKey === item.key ? "text-[#9fbf38]" : ""}`,
-
+                title: ` ${selectedKey === item.key ? "text-[#2596be]" : ""}`,
               }}
               // startContent={item.icon}
               onPress={() => {
